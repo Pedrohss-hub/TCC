@@ -111,6 +111,7 @@ ul li.item-menu a .icon > i {
 
 .logo{
   max-width: 100%;
+  cursor: pointer;
 }
 
 .box-btn-login{

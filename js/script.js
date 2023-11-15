@@ -53,3 +53,7 @@ function proximaImg(){
 
     document.getElementById("radio" +cont).checked = true;
 };
+
+function goHome(){
+    window.location = 'index.html';
+}
