@@ -4,45 +4,52 @@ var menuItem = document.querySelectorAll('.item-menu');
 // deixa selecionado o item que eu cliquei na sidebar
 function selectLink() {
     menuItem.forEach((item) =>
-            item.classList.remove('ativo')
-        );
-        this.classList.add('ativo');
+        item.classList.remove('ativo')
+    );
+    this.classList.add('ativo');
 };
 
-menuItem.forEach((item)=>
+menuItem.forEach((item) =>
     item.addEventListener('click', selectLink)
 );
 
 //icone para abrir a sidebar
 
+var btnExp1 = document.querySelector('#btn-exp1');
 var btnExp = document.querySelector('#btn-exp');
 var menuSide = document.querySelector('.menu-lateral');
 
-btnExp.addEventListener('click', function(){
+btnExp1.addEventListener('click', function () {
+    menuSide.classList.toggle('expandir')
+})
+
+btnExp.addEventListener('click', function () {
     menuSide.classList.toggle('expandir')
 })
 
 
 // carrossel
-    const carousel = document.querySelector(".carrossel");
-    let currentIndex = 0;
+var radio = document.querySelector(".manual-btn");
+var cont = 1;
 
-    function showImage(index) {
-        const size = carousel.children.length;
-        if (index < 0) {
-            currentIndex = size - 1;
-        } else if (index >= size) {
-            currentIndex = 0;
-        } else {
-            currentIndex = index;
-        }
+document.getElementById("radio1").checked = true;
 
-        const newTransformValue = -currentIndex * 100 + "%";
-        carousel.style.transform = `translateX(${newTransformValue})`;
+// define o tempo em que cada imagem aparecerá
+setInterval(() => {
+    proximaImg();
+}, 3000);
+
+
+// função para passar de imagem
+function proximaImg(){
+    
+    // contador de imagem ganha mais um número assim que troca de imagem
+    cont++;
+    
+    // qnd o contador chegar a ultima imagem, ele volta para a primeira
+    if(cont > 4){
+        cont = 1;
     }
 
-    setInterval(() => {
-        currentIndex++;
-        showImage(currentIndex);
-    }, 3000); // Troca de imagem a cada 3 segundos, ajuste conforme necessário
-
+    document.getElementById("radio" +cont).checked = true;
+};

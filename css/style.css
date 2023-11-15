@@ -14,13 +14,18 @@ nav.menu-lateral {
   width: 55px;
   height: 100%;
   background-color: #fff;
-  padding: 80px 0 40px 0;
+  padding: 20px 0 40px 0;
   position: fixed;
   top: 0;
   left: 0;
 
   box-shadow: 3px 0 25px rgba(0, 0, 0, 0.3);
   transition: 0.5s;
+}
+
+nav.menu-lateral .btn-expandir{
+  margin-left: 15px;
+  margin-bottom: 13px;
 }
 
 nav.menu-lateral.expandir {
@@ -79,12 +84,13 @@ ul li.item-menu a .icon > i {
 
 /* navbar */
 .box-navbar {
-  height: 80px;
+  height: 60px;
   width: 100%;
   background-color: #fff;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
-  z-index: 1;
   position: sticky;
+  margin-bottom: -18px;
+  z-index: 1;
 }
 
 .navbar {
@@ -96,15 +102,19 @@ ul li.item-menu a .icon > i {
   padding: 20px 20px 20px 15px;
 }
 
-.logo {
-  width: 9vh;
-  height: auto;
-  margin-top: 10px;
+.box-logo{
+  width: 73px;
+  height: 63px;
+  margin-left: 10vh;
+  padding: 3px;
 }
 
-.fdp {
-  width: auto;
-  height: auto;
+.logo{
+  max-width: 100%;
+}
+
+.box-btn-login{
+  /* background-color: #323232; */
 }
 
 .btn-login {
@@ -115,33 +125,30 @@ ul li.item-menu a .icon > i {
   font-weight: bolder;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-}
-
-/* carrosel */
-.carrossel-container {
   width: 100%;
-  height: auto;
-  background-color: #323232;
-  display: flex;
-  margin: 5vh auto;
-}
-
-.carrosel {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.img {
-  width: 100vh;
-  max-height: 100%;
-  height: auto;
-}
-
-.carrosel a {
-  flex: 0 0 100%;
-  height: 100%;
   text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  nav.menu-lateral{
+    width: 0;
+  }
+  nav.menu-lateral.expandir{
+    width: 50px;
+  }
+
+  .box-navbar{
+    height: 40px;
+  }
+
+  .box-logo{
+    width: 53px;
+  height: 43px;
+  }
+
+  .btn-login{
+    font-size: 10px;
+    width: 74px;
+    height: 26px;
+  }
 }
