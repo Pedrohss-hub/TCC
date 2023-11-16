@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 body {
-  height: 900vh;
   background-color: #fdeccc;
 }
 
@@ -23,7 +22,7 @@ nav.menu-lateral {
   transition: 0.5s;
 }
 
-nav.menu-lateral .btn-expandir{
+nav.menu-lateral .btn-expandir {
   margin-left: 15px;
   margin-bottom: 13px;
 }
@@ -102,14 +101,14 @@ ul li.item-menu a .icon > i {
   padding: 20px 20px 20px 15px;
 }
 
-.box-logo{
+.box-logo {
   width: 73px;
   height: 63px;
   margin-left: 10vh;
   padding: 3px;
 }
 
-.logo{
+.logo {
   max-width: 100%;
   cursor: pointer;
 }
@@ -127,61 +126,157 @@ ul li.item-menu a .icon > i {
 }
 
 @media screen and (max-width: 767px) {
-  nav.menu-lateral{
+  nav.menu-lateral {
     width: 0;
   }
-  nav.menu-lateral.expandir{
+  nav.menu-lateral.expandir {
     width: 50px;
   }
 
-  .box-navbar{
+  .box-navbar {
     height: 40px;
   }
 
-  .box-logo{
+  .box-logo {
     width: 53px;
-  height: 43px;
+    height: 43px;
   }
 
-  .btn-login{
+  .btn-login {
     font-size: 10px;
     width: 74px;
     height: 26px;
   }
 }
 
-/* texto explicativo */
-.box-promocoes{
-  background-color: #F6C39A;
+/* promoções */
+.box-promocoes {
+  background-color: #f6c39a;
   width: 100%;
-  height: 400vh;
+  height: 100%;
   color: #fff;
   padding-top: 30px;
-  /* border-radius: 25px; */
-  margin: 80px auto 0 55px;
-  /* box-shadow: 0 3px 25px rgba(0, 0, 0, 0.5); */
+  margin: 80px auto 0 0;
+  padding-bottom: 40px;
 }
 
-.box-promocoes h1{
+.box-promocoes .title-geral {
   width: 100%;
   margin-bottom: 30px;
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
   font-size: 40px;
   text-align: center;
   text-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }
 
-.box-promocoes .promocao1-3{
+/* 1 e 3 promoção */
+.box-promocoes .promocao1-3 {
   width: 80%;
   height: 250px;
   background-color: #fff;
-  margin-left: 20px;
+  margin-left: 85px;
   border-radius: 10px;
   box-shadow: 0 3px 25px rgba(0, 0, 0, 0.3);
   display: flex;
+  margin-top: 100px;
 }
 
-.promocao1-3 .img-promocao{
+.promocao1-3 .img-promocao {
   background-color: #323232;
-  width: 60%;
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-align: center;
+}
+
+.promocao1-3 .box-txt-btn {
+  background-color: #fff;
+  width: 45%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 20px;
+}
+
+.promocao1-3 .txt-exp-promo {
+  width: 100%;
+  height: 160px;
+  background-color: #fff;
+  border-top-left-radius: 10px;
+  padding: 20px;
+  color: #323232;
+}
+
+.box-txt-btn .box-btn-promocao {
+  text-align: center;
+  margin-top: 8px;
+  width: 100%;
+  height: 25%;
+}
+
+.box-btn-promocao input {
+  width: 85%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(93deg, #ffb800 0%, #ff8a00 100%);
+  box-shadow: 0 3px 15px #ffb800;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* 2 e 4 promoções */
+.box-promocoes .promocao2-4 {
+  width: 80%;
+  height: 250px;
+  background-color: #fff;
+  margin-left: 350px;
+  border-radius: 10px;
+  box-shadow: 0 3px 25px rgba(0, 0, 0, 0.3);
+  display: flex;
+  margin-top: 100px;
+}
+
+.promocao2-4 .img-promocao {
+  background-color: #323232;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  text-align: center;
+}
+
+.promocao2-4 .box-txt-btn {
+  background-color: #fff;
+  width: 45%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 20px;
+}
+
+.promocao2-4 .txt-exp-promo {
+  width: 100%;
+  height: 160px;
+  background-color: #fff;
+  border-top-right-radius: 10px;
+  padding: 20px;
+  color: #323232;
+}
+
+.box-txt-btn .box-btn-promocao {
+  text-align: center;
+  margin-top: 8px;
+  width: 100%;
+  height: 25%;
+}
+
+.box-btn-promocao input {
+  width: 85%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(93deg, #ffb800 0%, #ff8a00 100%);
+  box-shadow: 0 3px 15px #ffb800;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
 }
