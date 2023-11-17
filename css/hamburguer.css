@@ -1,0 +1,10 @@
+.box1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-op{
+    background-color: aqua;
+    width: 100px;
+}
