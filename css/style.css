@@ -151,7 +151,8 @@ ul li.item-menu a .icon > i {
 
 /* promoções */
 .box-promocoes {
-  background-color: #f6c39a;
+  background-color: #f6c39a ;
+  background-image: linear-gradient( to bottom, #fdeccc, transparent, #f6c39a );
   width: 100%;
   height: 100%;
   color: #fff;
