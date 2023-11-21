@@ -2,9 +2,98 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 15%;
+    height: 100%;
+    width: 100%;
 }
 
 .first-op{
-    background-color: aqua;
-    width: 100px;
+    background-color: white;
+    width: 700px;
+    height: 300px;
+    margin-right: 3%;
+    display: flex;
+    border-radius: 10px;
+
+}
+
+.first-op-enter{
+    font-size: 19px;
+    font-family: "iFood RC Textos", sans-serif; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5%;
+}   
+
+.first-op-enter p{
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    font-weight: bold;
+
+}   
+
+.first-op-enter div{
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.first-op-enter h4{
+    margin-top: 20px;
+    margin-left: 40px;
+    color: #42a522;
+}
+
+.first-op-image{
+    margin-top: 10%;
+}
+
+.second-op{
+    background-color: white;
+    width: 700px;
+    height: 300px;
+    margin-right: 3%;
+    display: flex;
+    border-radius: 10px;
+}
+
+.second-op-enter{
+    font-size: 19px;
+    font-family: "iFood RC Textos", sans-serif; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5%;
+}
+
+.second-op-enter p{
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+.second-op-enter div{
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.second-op-enter h4{
+    margin-top: 20px;
+    margin-left: 40px;
+    color: #42a522;
+}
+
+.second-op-image{
+    margin-top: 10%;
+    
+}
+
+.promo-dia{
+    margin-top: 7%;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-family: iFood RC Textos;
 }
