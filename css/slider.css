@@ -25,7 +25,6 @@ section.slider{
 }
 
 .slide-box img{
-    /* object-fit: cover; */
     width: 100%;
     margin-left: 55px;
     height: 750px;
@@ -34,7 +33,7 @@ section.slider{
 .nav-manual, .nav-auto{
     position: absolute;
     width: 100%;
-    margin-top: 42%;
+    margin-top: 46%;
     display: flex;
     justify-content: center;
 }

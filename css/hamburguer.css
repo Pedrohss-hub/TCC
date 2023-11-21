@@ -2,9 +2,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 15%;
+    margin-top: 5%;
     height: 100%;
     width: 100%;
+    padding-left: 120px;
 }
 
 .first-op{
@@ -14,8 +15,14 @@
     margin-right: 3%;
     display: flex;
     border-radius: 10px;
-
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
+
+.first-op:hover {
+    transform: scale(1.1);
+}
+
 
 .first-op-enter{
     font-size: 19px;
@@ -56,6 +63,12 @@
     margin-right: 3%;
     display: flex;
     border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.second-op:hover {
+    transform: scale(1.1);
 }
 
 .second-op-enter{
