@@ -119,16 +119,16 @@
     position: absolute;
     top: 20px;
     left: 50px;
-    width: 1810px;
+    width: 1852px;
     z-index: -1;
 }
 
 .estilo2{
-    position: fixed;
+    position: absolute;
     right: 3px;
-    width: 1810px;
+    width: 1840px;
     z-index: -1;
-    bottom: 20%;
+    bottom: -193.5%;
 }
 
 .box-cards{
@@ -137,28 +137,47 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s ease;
 }
 
 .card1{
     margin-right: 60px;
+    transition: transform 0.3s ease;
+}
+
+.card1:hover{
+    transform: scale(1.1);
 }
 
 .card2{
     margin-right: 60px;
+    transition: transform 0.3s ease;
+}
+
+.card2:hover{
+    transform: scale(1.1);
+}
+
+.card3{
+    transition: transform 0.3s ease;
+}
+
+.card3:hover{
+    transform: scale(1.1);
 }
 
 .cardzin1{
     position: absolute;
-    z-index: 1;
     right: 68.3%;
     top: 2429px;
+    z-index: 1;
 }
 
 .cardzin2{
     position: absolute;
     z-index: 1;
     right: 48.9%;
-    top: 2429px;
+    top: 2434px;
 }
 
 .cardzin3{
