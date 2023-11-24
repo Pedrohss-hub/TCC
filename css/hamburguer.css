@@ -1,3 +1,9 @@
+body{
+    text-shadow: 2px 2px 2px #aaa;
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(#fdeccc,#F6D7BD);
+}
+
 .box1 {
     display: flex;
     align-items: center;
@@ -6,6 +12,8 @@
     height: 100%;
     width: 100%;
     padding-left: 120px;
+    font-family: 'iFood RC Textos', sans-serif;
+    text-shadow: 2px 2px 2px #aaa;
 }
 
 .first-op {
@@ -132,17 +140,19 @@
 }
 
 .box-cards{
-    width: 100%;
+    width: calc(70% - 55px);
+    margin: auto;
+    margin-right: 280px;
     height: 500px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     transition: transform 0.3s ease;
 }
 
 .card1{
-    margin-right: 60px;
     transition: transform 0.3s ease;
+    justify-content: center;
 }
 
 .card1:hover{
@@ -150,8 +160,8 @@
 }
 
 .card2{
-    margin-right: 60px;
     transition: transform 0.3s ease;
+    justify-content: center;
 }
 
 .card2:hover{
@@ -165,26 +175,4 @@
 .card3:hover{
     transform: scale(1.1);
 }
-
-.cardzin1{
-    position: absolute;
-    right: 68.3%;
-    top: 2429px;
-    z-index: 1;
-}
-
-.cardzin2{
-    position: absolute;
-    z-index: 1;
-    right: 48.9%;
-    top: 2434px;
-}
-
-.cardzin3{
-    position: absolute;
-    z-index: 1;
-    right: 29.6%;
-    top: 2429px;
-}
-
-
+    
