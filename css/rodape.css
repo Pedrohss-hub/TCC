@@ -60,3 +60,9 @@ footer{
 .logobommenu{
     margin-top: 1%;
 }
+
+@media screen and (max-width) {
+    footer{
+        margin-left: 90px;
+    }
+}

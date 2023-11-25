@@ -175,4 +175,121 @@ body{
 .card3:hover{
     transform: scale(1.1);
 }
-    
+
+@media screen and (max-width: 1324px){
+    .box1{
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 80px;
+    }
+
+    .first-op{
+        margin-bottom: 50px;
+        width: 95%;
+        margin-right: 70px;
+        font-size: 2px;
+    }
+
+    .second-op{
+        margin-bottom: 50px;
+        width: 95%;
+        margin-right: 70px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .box1{
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 80px;
+    }
+
+    .first-op{
+        margin-bottom: 50px;
+        width: 95%;
+        margin-right: 70px;
+        font-size: 2px;
+    }
+
+    .second-op{
+        margin-bottom: 50px;
+        width: 95%;
+        margin-right: 70px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .box1{
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 80px;
+    }
+
+    .first-op{
+        margin-bottom: 50px;
+        width: 100%;
+        margin-right: 70px;
+    }
+
+    .first-op-enter div{
+        font-size: 13px;
+    }
+
+    .first-op-enter p{
+        font-size: 17px;
+        margin-bottom: 8px;
+    }
+
+    .second-op{
+        margin-bottom: 50px;
+        width: 95%;
+        margin-right: 70px;
+    }
+
+    .second-op-enter div{
+        font-size: 13px;
+    }
+
+    .second-op-enter p{
+        font-size: 17px;
+        margin-bottom: 8px;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .box1{
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 80px;
+    }
+
+    .first-op{
+        margin-bottom: 50px;
+        width: 100%;
+        margin-right: 70px;
+    }
+
+    .first-op-enter div{
+        font-size: 13px;
+    }
+
+    .first-op-enter p{
+        font-size: 17px;
+        margin-bottom: 8px;
+    }
+
+    .second-op{
+        margin-bottom: 50px;
+        width: 95%;
+        margin-right: 70px;
+    }
+
+    .second-op-enter div{
+        font-size: 13px;
+    }
+
+    .second-op-enter p{
+        font-size: 17px;
+        margin-bottom: 8px;
+    }
+}
