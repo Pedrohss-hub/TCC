@@ -6,10 +6,10 @@
 }
 body {
   transition: transform 3s;
-  background-image: linear-gradient(#fdeccc,#F6D7BD);
+  background-image: linear-gradient(#fdeccc,#F6C39A);
 }
 
-/* sidebar */
+/* SIDEBAR */
 nav.menu-lateral {
   width: 55px;
   height: 100%;
@@ -18,9 +18,9 @@ nav.menu-lateral {
   position: fixed;
   top: 0;
   left: 0;
-
   box-shadow: 3px 0 25px rgba(0, 0, 0, 0.3);
   transition: 0.5s;
+  z-index: 1;
 }
 
 nav.menu-lateral .btn-expandir {
@@ -30,6 +30,7 @@ nav.menu-lateral .btn-expandir {
 
 nav.menu-lateral.expandir {
   width: 255px;
+  z-index: 1;
 }
 
 .btn-expandir > i {
@@ -82,7 +83,7 @@ ul li.item-menu a .icon > i {
   margin-left: 10px;
 }
 
-/* navbar */
+/* NAVBAR */
 .box-navbar {
   height: 60px;
   width: 100%;
@@ -90,7 +91,6 @@ ul li.item-menu a .icon > i {
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
   position: sticky;
   margin-bottom: -18px;
-  z-index: 1;
 }
 
 .navbar {
@@ -167,6 +167,7 @@ ul li.item-menu a .icon > i {
   font-size: 40px;
   text-align: center;
   text-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 50px;
 }
 
 /* 1 e 3 promoção */
@@ -174,7 +175,7 @@ ul li.item-menu a .icon > i {
   width: 80%;
   height: 350px;
   background-color: #fff;
-  margin-left: 85px;
+  margin-left: 5%;
   border-radius: 10px;
   box-shadow: 0 3px 25px rgba(0, 0, 0, 0.3);
   display: flex;
@@ -258,7 +259,7 @@ ul li.item-menu a .icon > i {
 .box-promocoes .promocao2-4 {
   width: 80%;
   height: 350px;
-  margin-left: 360px;
+  margin-left: 17%;
   border-radius: 10px;
   box-shadow: 0 3px 25px rgba(0, 0, 0, 0.3);
   display: flex;
@@ -323,6 +324,6 @@ ul li.item-menu a .icon > i {
   margin-top: 130px;
 }
 
-.efeito-promo1, .efeito-promo2, .efeito-promo3, .efeito-promo4{
+.efeito-promo1, .efeito-promo2, .efeito-promo3, .efeito-promo4, .efeito-title{
   visibility: hidden;
 }

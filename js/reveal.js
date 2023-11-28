@@ -1,8 +1,8 @@
-// ESTE ARQUIVO É APENAS PARA CRIAR E CONTROLAR OS EFEITOS DE ROLAGEM DO SITE
+//  ESTE ARQUIVO É APENAS PARA CRIAR E CONTROLAR OS EFEITOS DE ROLAGEM DO SITE
 
 window.revelar = ScrollReveal({reset:true});
 
-// BOX PROMOÇÃO 1
+//  BOX PROMOÇÃO 1
 
 revelar.reveal('.efeito-promo1', 
 {
@@ -11,12 +11,12 @@ revelar.reveal('.efeito-promo1',
     origin: "left"
 });
 
-revelar.reveal('.efeito-promo2', 
-{
-    duration: 2000,
-    distance: "120px",
-    origin: "right"
-});
+ revelar.reveal('.efeito-promo2', 
+ {
+     duration: 2000,
+     distance: "57px",
+     origin: "right"
+ });
 
 revelar.reveal('.efeito-promo3', 
 {
@@ -25,9 +25,15 @@ revelar.reveal('.efeito-promo3',
     origin: "left"
 });
 
-revelar.reveal('.efeito-promo4', 
+ revelar.reveal('.efeito-promo4', 
+ {
+     duration: 2000,
+     distance: "57px",
+     origin: "right"
+ });
+
+revelar.reveal('.efeito-title', 
 {
-    duration: 2000,
-    distance: "120px",
-    origin: "right"
+    duration: 1500,
+    distance: "90px"
 });
