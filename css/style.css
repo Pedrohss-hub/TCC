@@ -6,7 +6,7 @@
 }
 body {
   transition: transform 3s;
-  background-image: linear-gradient(#fdeccc,#F6C39A);
+  background-image: linear-gradient(#ffeac3,#ffc739b6);
 }
 
 /* SIDEBAR */
@@ -89,8 +89,9 @@ ul li.item-menu a .icon > i {
   width: 100%;
   background-color: #fff;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
-  position: sticky;
+  position: fixed;
   margin-bottom: -18px;
+  z-index: 1;
 }
 
 .navbar {

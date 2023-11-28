@@ -6,28 +6,28 @@ window.revelar = ScrollReveal({reset:true});
 
 revelar.reveal('.efeito-promo1', 
 {
-    duration: 2000,
+    duration: 1500,
     distance: "120px",
     origin: "left"
 });
 
  revelar.reveal('.efeito-promo2', 
  {
-     duration: 2000,
+     duration: 1500,
      distance: "57px",
      origin: "right"
  });
 
 revelar.reveal('.efeito-promo3', 
 {
-    duration: 2000,
+    duration: 1500,
     distance: "120px",
     origin: "left"
 });
 
  revelar.reveal('.efeito-promo4', 
  {
-     duration: 2000,
+     duration: 1500,
      distance: "57px",
      origin: "right"
  });
