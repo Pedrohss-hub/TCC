@@ -1,12 +1,4 @@
-<?php
 
-    if(isset($_POST['submit']))
-    {
-        print_r($_POST['usuario']);
-        print_r($_POST['senha']);
-    }
-
-?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -96,52 +88,71 @@
     <!-- fim navbar -->
 
     <!-- comeco login -->
-    
     <div id="login">
-    <fieldset>
-        <form class="card" action="login.php" method="post">
-            <div class="card-header">
-                <h2>Página de login</h2>
-                <h3>Faça seu login para acessar nosso cardápio</h3>
-            </div>
-
-            <div class="card-content">
-                <div class="card-content-area">
-                    <label for="usuario">Email</label>
-                    <input type="email" id="usuario" name="usuario" autocomplete="off">
+        <fieldset>
+            <form class="card" action="login.php" method="post">
+                <div class="card-header">
+                    <h2>Página de login</h2>
+                    <h3>Faça seu login para acessar nosso cardápio</h3>
                 </div>
 
-                <div class="card-content-area">
-                    <label for="password">Senha</label>
-                    <input type="password" id="password" name="senha" autocomplete="off">
-                </div>
-            </div>
+                <div class="card-content">
+                    <div class="card-content-area">
+                        <label for="usuario">Email</label>
+                        <input type="email" id="usuario" name="email" autocomplete="off">
+                    </div>
 
-            <div class="card-footer">
-                <input name="submit" type="submit" value="Acessar" class="submit">
-                <div style="align-items: center; justify-content: center; display: flex; margin: 10px;">- OU -</div>
-
-                <div class="crie-aqui">
-                    <div>Não tem conta? <a>Crie aqui</a></div>
+                    <div class="card-content-area">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" name="senha" autocomplete="off">
+                    </div>
                 </div>
 
-                <a href="#" class="recuperar_senha">Esqueceu sua senha?</a>
-                <img src="/images/logo.png" alt="">
-            </div>
-        </form>
-    </fieldset>
-</div>
+                <div class="card-footer">
+                    <input name="submit" type="submit" value="Acessar" class="submit">
+                    <div style="align-items: center; justify-content: center; display: flex; margin: 10px;">- OU -</div>
 
+                    <div class="crie-aqui">
+                        <div>Não tem conta? <a>Crie aqui</a></div>
+                    </div>
+
+                    <a href="#" class="recuperar_senha">Esqueceu sua senha?</a>
+                    <img src="/images/logo.png" alt="">
+                </div>
+            </form>
+        </fieldset>
+    </div>
     <!-- final login -->
 
+    <!-- Seu script PHP agora está no final do arquivo -->
+    <?php
+    include('conexao.php');
 
-    <!-- linkando o php -->
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
 
+        $sql = "SELECT senha FROM usuarios WHERE email = '$email'";
+        $result = $conn->query($sql);
 
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
 
+            if (password_verify($senha, $row['senha'])) {
+                echo "Login bem-sucedido!";
+                // Você pode adicionar redirecionamento ou outras ações aqui
+            } else {
+                echo "Senha incorreta.";
+            }
+        } else {
+            echo "Email não encontrado.";
+        }
+    }
+    ?>
+    </body>
+
+    <!-- Seu link para o script.js permanece inalterado -->
     <script src="/js/script.js"></script>
-
-    </script>
-</body>
-
 </html>
+
+
