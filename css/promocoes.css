@@ -199,8 +199,9 @@ ul li.item-menu a .icon>i {
 .box-banner-principal {
   display: flex;
   justify-content: center;
-  margin-left: 10px;
-  margin-top: 2%;
+  width: 80%;
+  height: 400px;
+  margin-left: 160px;
 }
 
 .box-banner-principal img {
