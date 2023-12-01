@@ -17,7 +17,8 @@
   <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap" rel="stylesheet">
+
   <!-- TITLE-CATEGORIAS, TITLE-RESTAURANTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,13 +34,13 @@
       <i class="bi bi-list" id="btn-exp1"></i> <!-- botao de expandir sidebar -->
     </div>
     <ul>
-      <li class="item-menu ativo">
+      <li class="item-menu">
         <a href="index.html">
           <span class="icon"><i class="bi bi-house"></i></span>
           <span class="txt-link">Home</span>
         </a>
       </li>
-      <li class="item-menu">
+      <li class="item-menu ativo">
         <a href="/html/promocoes.html">
           <span class="icon"><i class="bi bi-tag"></i></span>
           <span class="txt-link">Promoções</span>
@@ -80,6 +81,7 @@
   <!-- FIM NAVBAR -->
 
   <!-- BANNER PRINCIPAL -->
+  <br>
   <div class="box-banner-principal">
     <img src="/images/bannerprincipal.png">
   </div>
@@ -119,6 +121,9 @@
       <h1 class="title-restaurantes">Restaurantes</h1>
 
       <div class="flex-restaurantes">
+        <div class="seta-esquerda" onClick="handleLeftClick()">
+          <i class="bi bi-arrow-left-short"></i>
+        </div>
         <div class="restaurante" id="restaurante1">
           <img src="/images/logoMc.png">
           <span class="name-restaurante">McDonald's</span>
@@ -137,7 +142,7 @@
         </div>
         <div class="restaurante" id="restaurante3">
           <img src="/images/logoMc.png">
-          <span class="name-restaurante">Subway</span>
+          <span class="name-restaurante">Subwayasfadsa</span>
         </div>
         <div class="restaurante" id="restaurante3">
           <img src="/images/logoMc.png">
@@ -182,6 +187,9 @@
         <div class="restaurante" id="restaurante3">
           <img src="/images/logoMc.png">
           <span class="name-restaurante">Subway</span>
+        </div>
+        <div class="seta-direita" onClick="handleRightClick()">
+          <i class="bi bi-arrow-right-short"></i>
         </div>
       </div>
     </div>

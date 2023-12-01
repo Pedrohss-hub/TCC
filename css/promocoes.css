@@ -4,6 +4,7 @@
   font-family: sans-serif;
   box-sizing: border-box;
 }
+
 body {
   transition: transform 3s;
   background-image: linear-gradient(#ffeac3, #ffecdb);
@@ -34,7 +35,7 @@ nav.menu-lateral.expandir {
   z-index: 1;
 }
 
-.btn-expandir > i {
+.btn-expandir>i {
   color: #323232;
   font-size: 24px;
   cursor: pointer;
@@ -79,20 +80,21 @@ nav.menu-lateral.expandir .txt-link {
   opacity: 1;
 }
 
-ul li.item-menu a .icon > i {
+ul li.item-menu a .icon>i {
   font-size: 30px;
   margin-left: 10px;
 }
 
 /* NAVBAR */
 .box-navbar {
-  height: 60px;
+  height: 68px;
   width: 100%;
   background-color: #fff;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
-  position: relative;
+  position: sticky;
   margin-bottom: -18px;
   z-index: 1;
+  top: 0;
 }
 
 .navbar {
@@ -116,22 +118,65 @@ ul li.item-menu a .icon > i {
   cursor: pointer;
 }
 
-.btn-login {
+.box-btn-login button {
   border: none;
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  font-weight: bolder;
+  padding: 10px 35px;
+  border-radius: 5%;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   width: 100%;
   text-align: center;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  font-size: 18px;
+  font-family: "Barlow", sans-serif;
+}
+.box-btn-login button:hover{
+  color: #fff;
+  z-index: 1;
+  transition: .4s;
+}
+
+.box-btn-login button::before {
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  width: 105%;
+  height: 105%;
+  border-radius: 5%;
+  position: absolute;
+  left: -100px;
+  top: 0;
+  background-color: #ff8a00;
+  z-index: -1;
+}
+
+.box-btn-login button:hover::before {
+  animation: deslocar .3s;
+  left: 0;
+  top: 0;
+}
+
+@keyframes deslocar {
+  0% {
+    left: -100px;
+    top: 0;
+  }
+
+  100% {
+    left: 0;
+    top: 0;
+  }
 }
 
 @media screen and (max-width: 767px) {
   nav.menu-lateral {
     width: 0;
   }
+
   nav.menu-lateral.expandir {
     width: 50px;
   }
@@ -156,23 +201,26 @@ ul li.item-menu a .icon > i {
 .box-banner-principal {
   display: flex;
   justify-content: center;
+  margin-left: 10px;
   margin-top: 2%;
 }
+
 .box-banner-principal img {
   box-shadow: 0 3px 55px rgba(0, 0, 0, 0.7);
   border-radius: 25px;
   cursor: pointer;
 }
+
 .title-categorias {
   font-family: "Barlow", sans-serif;
   margin-top: 4%;
+  font-weight: 800;
 }
 
 .box-categorias {
   width: 90%;
   height: 250px;
   margin: 5% 0 0 6%;
-  text-align: center;
 }
 
 .box-restaurantes {
@@ -203,7 +251,33 @@ ul li.item-menu a .icon > i {
   border-radius: 10px;
   box-shadow: 0 3px 25px #30303070;
   overflow-x: scroll;
-  overflow-y: hidden;
+  position: relative;
+  flex: none;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+.seta-direita {
+  position: sticky;
+  right: 0;
+  z-index: 1;
+}
+
+.seta-esquerda {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+}
+
+.seta-esquerda i,
+.seta-direita i {
+  font-size: 40px;
+  cursor: pointer;
+  color: #c2c2c2;
+}
+
+.flex-restaurantes::-webkit-scrollbar {
+  display: none;
 }
 
 .flex-comidas .comida,
@@ -225,7 +299,7 @@ ul li.item-menu a .icon > i {
 }
 
 .flex-comidas .comida:hover {
-  transform: scale(1.07);
+  transform: scale(1.1);
 }
 
 .box-categorias .title-categorias,
@@ -233,20 +307,19 @@ ul li.item-menu a .icon > i {
   font-family: "Barlow", sans-serif;
   text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
   color: #303030;
+  font-size: 24px;
 }
 
 .flex-restaurantes .restaurante img {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: 3px;
 }
+
 .name-restaurante,
 .name-categoria {
   font-family: "Barlow", sans-serif;
   text-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   margin-bottom: 14px;
-}
-
-.box-engloba-tudo {
-  width: 97%;
-  margin: 0 auto 0 55px;
 }
