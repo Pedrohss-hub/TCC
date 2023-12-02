@@ -7,9 +7,10 @@
     <title>Bom Menu</title>
 
     <!-- LINK CSS -->
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/pontos.css">
-    <link rel="stylesheet" href="tcc/css/rodape.css">
+    <link rel="stylesheet" href="../css/slider.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/rodape.css">
+    <link rel="stylesheet" href="../css/sobre.css">
 
     <!-- ICON BOOTSTRAP -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -17,10 +18,20 @@
     <!-- FONTS GOOGLE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;800&display=swap" rel="stylesheet">
+
+    <!-- LINK COM SCROLL REVEAL -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="../js/reveal.js" defer></script>
 
 </head>
 
@@ -32,7 +43,7 @@
             <i class="bi bi-list" id="btn-exp1"></i> <!-- botao de expandir sidebar -->
         </div>
         <ul>
-            <li class="item-menu">
+            <li class="item-menu ativo">
                 <a href="index.html">
                     <span class="icon"><i class="bi bi-house"></i></span>
                     <span class="txt-link">Home</span>
@@ -44,7 +55,7 @@
                     <span class="txt-link">Promoções</span>
                 </a>
             </li>
-            <li class="item-menu ativo">
+            <li class="item-menu">
                 <a href="../html/pontos.html">
                     <span class="icon"><i class="bi bi-trophy"></i></span>
                     <span class="txt-link">Pontos</span>
@@ -78,54 +89,27 @@
     <br>
     <!-- FIM NAVBAR -->
 
+    <!-- comeco sobre nos -->
 
-    <div class="background">
-        <div class="container">
-            <div class="container-img">
-                <img src="../images/trofeu.png" alt="img-trofeu">
-            </div> <!--DIV IMG -->
-            <div class="title-geral">
-                <h1 class="dourado">Descubra Sabores, Ganhe Pontos e Troque por Prêmios!</h1>
-            </div> <!--TITLE-GERAL -->
-            <div class="estrofe">
-                <div class="excl dourado">
-                    !
-                </div>
-                <p>
-                    Seu paladar merece mais! Apresentamos o Bom Menu, o lugar onde as melhores promoções de restaurantes
-                    se transformam em recompensas incríveis. <br> <span class="dourado">Veja como é fácil!</span>
-                </p>
-            </div><!--ESTROFE -->
-            <div class="container-lista">
-                <div class="box item1">
-                    <div class="num dourado">
-                        1
-                    </div>
-                    <p class="p">
-                        Escolha sua Promoção Favorita, navegue por ofertas deliciosas de restaurantes locais.
-                    </p>
-                </div>
-                <div class="box item2">
-                    <div class="num dourado">
-                        2
-                    </div>
-                    <p class="p">
-                        Acesse pelo Bom Menu.
-                        Clique e ganhe pontos a cada promoção que acessar pelo nosso site.
-                    </p>
-                </div>
-                <div class="box item3">
-                    <div class="num dourado">
-                        3
-                    </div>
-                    <p class="p">
-                        Troque Pontos por Prêmios Exclusivos. <br>Mais pontos, mais prêmios! Descontos e experiências
-                        gastronômicas te esperam.
-                    </p>
-                </div>
-            </div>
-        </div> <!--CONTAINER -->
-    </div><!--BACKGROUND -->
+    <section class="box">
+        <h2 class="title">Equipe de Estudantes Programadores</h2>
+        <p class="text">Somos um grupo de estudantes programadores do ensino médio, atualmente com 18 anos de idade,
+            dedicados ao aprendizado e desenvolvimento de habilidades na área de programação.</p>
+
+        <h2 class="integrantes">Integrantes da Equipe:</h2>
+        <ul class="secao">
+            <li class="lista">Pedro Henrique Pires de Souza</li>
+            <li class="lista">Pedro Henrique Souza Santos</li>
+            <li class="lista">Pedro Paulo Santana Ueda</li>
+            <li class="lista">Flávio Henrique Costa Silva</li>
+        </ul>
+
+
+        
+    </section>
+
+    <!-- fim sobre nos -->
+
 
     <!-- começo rodapé -->
     <footer class="footer-visible">
@@ -138,12 +122,11 @@
             </div>
             <div class="linhas">
                 <div class="linha1">
-                    <a href="">Informações •</a>
-                    <a href="">Termos •</a>
-                    <a href="">Fale conosco</a>
+                    <a href="/html/index.html">Informações •</a>
+                    <a href="">Termos </a>
                 </div>
                 <div class="linha2">
-                    <a href="">Quem somos •</a>
+                    <a href="/html/sobrenos.html">Quem somos •</a>
                     <a href="">Missão</a>
                 </div>
             </div>
@@ -152,6 +135,7 @@
     </footer>
     <!-- fim rodape -->
 
-    <script src="../js/sidebar.js"></script>
-    <script src="../js/pontos.js"></script>
+    <script src="/js/script.js"></script>
 </body>
+
+</html>

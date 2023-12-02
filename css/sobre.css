@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+
+body{
+    background-image: none;
+    background-color: wheat;
+    margin: 0;
+    padding: 0;
+
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+section {
+    width: 100vh;
+    height: 60vh;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.text {
+    color: #e4ab1b;
+    line-height: 1.6;
+    font-size: 25px;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+.title{
+    margin-top: 40px;
+    font-size: 25px;
+}
+
+.integrantes{
+    margin-top: 40px;
+}
+
+.secao{
+    margin-top: 60px;
+    text-align: center;
+}
+
+.lista{
+    font-size: 20px;
+    
+}
+
+ul{
+    
+}

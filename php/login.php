@@ -1,4 +1,30 @@
+<?php
+include('conexao.php');
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+    $senha_inserida = $_POST['senha'];
+    $senha_hash = password_hash($senha_inserida, PASSWORD_DEFAULT);
+    echo "Senha Inserida: $senha_inserida<br>";
+    echo "Senha Hash: $senha_hash<br>";
+
+    $sql = "SELECT senha FROM usuarios WHERE email = '$email'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+
+        if (password_verify($senha, $row['senha'])) {
+            echo "Login bem-sucedido!";
+        } else {
+            echo "Senha incorreta.";
+        }
+    } else {
+        echo "Email não encontrado.";
+    }
+}
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -9,9 +35,9 @@
     <title>Login</title>
 
     <!-- link css -->
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/login.css">
-    <link rel="stylesheet" href="/css/rodape.css ">
+    <link rel="stylesheet" href="../css/style.css">
+   <link rel="stylesheet" href="../css/login.css">
+<link rel="stylesheet" href="../css/login.css">
 
     <!-- icon bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -75,7 +101,7 @@
                 <i class="bi bi-list" id="btn-exp"></i> <!-- botao de expandir sidebar -->
             </div>
             <div class="box-logo">
-                <img src="/images/logo.png" alt="Bom Menu" class="logo" onclick="goHome()">
+                <img src="../images/logo.png" alt="Bom Menu" class="logo" onclick="goHome()">
             </div>
             <div class="box-btn-login">
                 <a href="#">
@@ -117,7 +143,7 @@
                     </div>
 
                     <a href="#" class="recuperar_senha">Esqueceu sua senha?</a>
-                    <img src="/images/logo.png" alt="">
+                    <img src="../images/logo.png" alt="">
                 </div>
             </form>
         </fieldset>
@@ -125,30 +151,7 @@
     <!-- final login -->
 
     <!-- Seu script PHP agora está no final do arquivo -->
-    <?php
-    include('conexao.php');
 
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $email = $_POST['email'];
-        $senha = $_POST['senha'];
-
-        $sql = "SELECT senha FROM usuarios WHERE email = '$email'";
-        $result = $conn->query($sql);
-
-        if ($result->num_rows > 0) {
-            $row = $result->fetch_assoc();
-
-            if (password_verify($senha, $row['senha'])) {
-                echo "Login bem-sucedido!";
-                // Você pode adicionar redirecionamento ou outras ações aqui
-            } else {
-                echo "Senha incorreta.";
-            }
-        } else {
-            echo "Email não encontrado.";
-        }
-    }
-    ?>
     </body>
 
     <!-- Seu link para o script.js permanece inalterado -->
